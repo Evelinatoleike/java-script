@@ -6,7 +6,7 @@ btn1.addEventListener("click", function () {
 let btn2 = document.getElementById("btn2");
 btn2.addEventListener("click", function (e) {
     e.preventDefault();
-    swal("Dėkojame už jūsų nuomonę!", "Gražios dienos", "success");
+    swal("Dėkojame už komentarą!", "Gražios dienos", "success");
     let form = document.getElementById("form");
     form.style.display = "none";
 
