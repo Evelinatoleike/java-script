@@ -1,37 +1,28 @@
-function random(min, max) {
+
+function rand(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-let luckyNumber = rand(1, 10);
-console.log(luckyNumber);
+let result = document.createElement("p");
+let randNumber = rand(0, 100);
 let count = 0;
-let answer = document.createElement("p");
-let counting = document.createElement("p1");
-let body = document.querySelector("body");
-let forma = document.forms["guessNumber"];
+console.log(randNumber);
 
+let forma = document.forms['pirma'];
 
-function numCheck(rNum, gNum) {
-    let result = "";
-    if (luckyNumber == gNum) {
-        result = "Very lucky guess!";
-    } else if (luckyNumber > gNum) {
-        result = "Too big!";
-    } else if (luckyNumber < gNum) {
-        result = "Too small!";
-    }
-    else { result = "Error" }
-    return result;
-}
-
-forma.addEventListener("submit", function (e) {
+forma.addEventListener('submit', function (e) {
     e.preventDefault();
-    let guesing = +forma["number"].value;
-    answer.textContent = numCheck(luckyNumber, guesing);
+    let skaicius = +forma["number"].value;
+    console.log(skaicius);
     count++;
-    counting.textContent = count + " Guesses are made.";
-    body.appendChild(answer);
-    body.appendChild(counting);
-})
+    if (randNumber > skaicius) {
+        result.textContent = `Reikia didesnio skaiciaus nei ${skaicius}`;
+    } else if (randNumber < skaicius) {
+        result.textContent = `Reikai mazesnio skaiciaus nei ${skaicius}`;
+    }
+    else {
+        result.textContent = `Pataikei iš ${count} karto`;
+    }
+    body.appendChild(result);
+});
