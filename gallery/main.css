@@ -1,0 +1,23 @@
+body {
+    display: inline-block;
+}
+
+.big-img {
+    width: 456px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    display: inline-block;
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p > img {
+    height: 100px;
+}
