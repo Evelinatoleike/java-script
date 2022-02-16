@@ -4,32 +4,34 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+let luckyNumber = rand(1, 100);
+console.log(luckyNumber);
 let count = 0;
-let randNum = random(0, 100);
-console.log(randNum);
+let answer = document.createElement("p");
+let counting = document.createElement("p1");
+let body = document.querySelector("body");
+let forma = document.forms["guessNumber"];
 
-function numCheck(rNum, ivestasSkaicius) {
-    let ats = "";
-    if (ivestasSkaicius == rNum) {
-        ats = "Atspejai";
-    } else if (ivestasSkaicius > rNum) {
-        ats = "Skaicius yra mazesnis";
-    } else if (ivestasSkaicius < rNum) {
-        ats = "Skaicius yra didesnis";
+
+function numCheck(rNum, gNum) {
+    let result = "";
+    if (luckyNumber == gNum) {
+        result = "Very lucky guess!";
+    } else if (luckyNumber > gNum) {
+        result = "Too big!";
+    } else if (luckyNumber < gNum) {
+        result = "Too small!";
     }
-    return ats;
+    else { result = "Error" }
+    return result;
 }
 
-let form = document.querySelector("form");
-let atsParag1 = document.getElementsByTagName("p")[0];
-let atsParag2 = document.getElementsByTagName("p")[1];
-
-form.addEventListener("submit", function (e) {
-    count++;
+forma.addEventListener("submit", function (e) {
     e.preventDefault();
-    console.log(e.target.elements.number.value);
-    let spejimas = e.target.elements.number.value;
-    console.log(numCheck(randNum, spejimas));
-    atsParag1.textContent = numCheck(randNum, spejimas);
-    atsParag2.textContent = "Spejimu skaicius: " + count;
+    let guesing = +forma["number"].value;
+    answer.textContent = numCheck(luckyNumber, guesing);
+    count++;
+    counting.textContent = count + " Guesses are made.";
+    body.appendChild(answer);
+    body.appendChild(counting);
 })
