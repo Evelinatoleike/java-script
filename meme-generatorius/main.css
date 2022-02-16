@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 800px;
+    border-radius: 10px;
+    padding: 100px 0 0 100px;
+}
+
+.left-col {
+    background-color: #bebe03;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.left-col h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: impact;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+        -2px 2px 0 #000, 0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000,
+        -2px 0px 0 #000, 2px 2px 5px #000;
+    position: relative;
+}
+
+.left-col .down-text {
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.left-col .up-text {
+    top: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.right-col {
+    background-color: #df8bbd;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.visible {
+    display: none;
+}
+
+.background-div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.big-img {
+    height: 600px;
+}
+
+img {
+    height: 100px;
+}
+
+form {
+    font-family: impact;
+    width: 400px;
+    margin: 15px;
+    /* background-color: #fff; */
+    border: 1px solid rgb(240, 119, 204);
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+}
+
+.margin {
+    margin: 10px;
+}
+
+input {
+    width: 80%;
+}
+
+.btn {
+    color: #fff;
+    padding: 10px 30px;
+    background-color: #db1e6d;
+    border: 2px solid #f8a3d8;
+    border-radius: 5px;
+}

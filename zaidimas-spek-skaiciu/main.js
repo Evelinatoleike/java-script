@@ -4,7 +4,7 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-let luckyNumber = rand(1, 100);
+let luckyNumber = rand(1, 10);
 console.log(luckyNumber);
 let count = 0;
 let answer = document.createElement("p");
