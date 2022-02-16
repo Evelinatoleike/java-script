@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url(./img/autumn.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <title>No repeat background</title>
+
+</head>
+
+<body class="body" id="body" style="background-image: url(./img/01.jpg);">
+    <form name="forma">
+        <p style="color: rgb(252, 203, 233)">Choose background:</p>
+        <form>
+            <select name="sarasas" id="season">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+            </select>
+        </form>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./main.js"></script>
+
+</body>
+
+</html>

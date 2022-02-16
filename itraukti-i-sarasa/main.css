@@ -1,0 +1,40 @@
+body {
+     height: 100vh;
+     transition: 0.5s;
+     padding: 100px 0 0 300px
+}
+
+.visible {
+    display: none;
+}
+
+img {
+    height: 100px;
+}
+
+form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 400px;
+    margin: 15px;
+    background-color: plum;
+    border: 1px solid rgb(255, 104, 222);
+}
+
+.margin {
+    margin: 10px;
+}
+
+input {
+    width: 250px;
+}
+
+.btn {
+    color: #fff;
+    padding: 10px 30px;
+    background-color: rgb(255, 104, 222);
+    border: 2px solid rgb(240, 195, 230);
+    border-radius: 5px;
+    margin-left: 100px;
+}

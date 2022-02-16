@@ -1,0 +1,39 @@
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 100vh;
+        }
+
+        body>div {
+            position: relative;
+        }
+
+        .img-text {
+            position: absolute;
+            background-color: rgb(241, 238, 234);
+            color: black;
+            bottom: 25px;
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .img {
+            float: left;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .btn {
+            background-color: rgb(231, 225, 225);
+            font-size: 20px;
+            color: green;
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+        }
+    </style>
