@@ -65,7 +65,6 @@ function appendCard(card) {
 let btn = document.querySelector("button");
 btn.addEventListener("click", function () {
     getData().then(data => {
-
         let { name, dob, location, email, picture } = data.results[0];
         name = `${name.title} ${name.first} ${name.last}`;
         dob = dob.age;
